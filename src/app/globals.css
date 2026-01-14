@@ -1,0 +1,33 @@
+@tailwind utilities;
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Custom slider styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #f97316;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #f97316;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
