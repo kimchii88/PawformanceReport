@@ -16,7 +16,7 @@ export default function ColorfulTitle({ text }: ColorfulTitle) {
     ];
 
     return (
-        <div className="flex justify-center items-center gap-1 flex-wrap text-center">
+        <div className="flex justify-center items-center gap-1 flex-wrap text-center whitespace-pre-line">
             {text.split("").map((char, idx) => (
                 <span
                     key={idx}
