@@ -77,7 +77,7 @@ export const BEHAVIOUR_OPTIONS: Array<{ value: BehaviourTag; label: string }> = 
 
 export default function ReportCard() {
     const [reports, setReports] = useState<NewReportInterface[]>([]);
-    const [currentStep, setCurrentStep] = useState(3);
+    const [currentStep, setCurrentStep] = useState(0);
     const [currentReport, setCurrentReport] = useState<CurrentReportInterface>({
         photo: null,
         dogName: "",
@@ -92,7 +92,6 @@ export default function ReportCard() {
         behaviours: [],
     });
 
-    const [showReportView, setShowReportView] = useState(false);
     const [viewingReport, setViewingReport] = useState<NewReportInterface>();
 
     const steps = ["name", "photo", "energy", "behaviour", "comments", "preview"];
@@ -144,10 +143,8 @@ export default function ReportCard() {
             photo: currentReport.photo as string,
             energyLevel: currentReport.energyLevel,
         };
-        console.log(newReport);
         setReports([newReport, ...reports]);
         setViewingReport(newReport);
-        setShowReportView(true);
         resetForm();
     };
 
@@ -166,15 +163,6 @@ export default function ReportCard() {
             behaviours: [],
         });
         setCurrentStep(0);
-    };
-
-    const formatDate = (dateStr: string) => {
-        const date = new Date(dateStr);
-        return date.toLocaleDateString("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric",
-        });
     };
 
     return (
