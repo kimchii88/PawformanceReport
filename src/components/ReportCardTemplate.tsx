@@ -32,7 +32,7 @@ export default function ReportCardTemplate({ viewingReport }: ReportCardTemplate
     const energyStyles = getEnergyStyles(viewingReport.energyLevel);
 
     return (
-        <div className="bg-white rounded-lg shadow-2xl p-8 border-8 border-double border-orange-400 relative">
+        <div className="bg-white rounded-lg shadow-2xl p-8 md:border-8 md:border-double md:border-orange-400 relative">
             <div className="absolute top-4 left-4 flex gap-2">
                 <FlowerDoodle color="bg-blue-300" size="w-6 h-6" />
                 <FlowerDoodle color="bg-orange-300" size="w-6 h-6" />
@@ -51,11 +51,11 @@ export default function ReportCardTemplate({ viewingReport }: ReportCardTemplate
             </div>
 
             <div className="mb-4">
-                <ColorfulTitle text={`${viewingReport.dogName}'s`} />
+                <ColorfulTitle text={`${viewingReport.dogName}'s`} sizing="text-2xl" />
                 <br />
-                <ColorfulTitle text={`Report Card`} />
+                <ColorfulTitle text={`Report Card`} sizing="text-2xl" />
             </div>
-            <div className="flex items-center justify-between px-12 py-4">
+            <div className="flex items-center justify-between md:px-12 py-4 px-0">
                 {/* Date */}
                 <div className="text-center">
                     <div className="text-sm font-bold opacity-70 mb-2" style={{ fontFamily: "Comic Sans MS, cursive" }}>
@@ -168,7 +168,7 @@ export default function ReportCardTemplate({ viewingReport }: ReportCardTemplate
             <div className="flex gap-4 justify-center pt-6 border-t-2 border-dashed border-orange-400">
                 <button
                     onClick={handleExportPDF}
-                    className="flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-600 shadow-lg"
+                    className="flex items-center gap-2 bg-blue-500 text-white md:px-6 md:py-3 p-2 rounded-xl font-bold hover:bg-blue-600 shadow-lg"
                     style={{ fontFamily: "Comic Sans MS, cursive" }}
                 >
                     <Download className="w-5 h-5" />
@@ -176,7 +176,7 @@ export default function ReportCardTemplate({ viewingReport }: ReportCardTemplate
                 </button>
                 <button
                     onClick={handleShareWhatsApp}
-                    className="flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full font-bold hover:bg-green-600 shadow-lg"
+                    className="flex items-center gap-2 bg-green-500 text-white md:px-6 md:py-3 p-2 rounded-xl font-bold hover:bg-green-600 shadow-lg"
                     style={{ fontFamily: "Comic Sans MS, cursive" }}
                 >
                     <Share2 className="w-5 h-5" />

@@ -11,7 +11,7 @@ export default function Name({ currentReport, setCurrentReport }: NameInterface)
     const isGirlSelected = currentReport.gender === "girl";
 
     return (
-        <CardContainer title="🐕 Who did you walk today?">
+        <CardContainer title="Who did you walk today? 🐕">
             <input
                 type="text"
                 value={currentReport.dogName}

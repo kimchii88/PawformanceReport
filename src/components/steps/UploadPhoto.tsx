@@ -11,7 +11,7 @@ interface UploadPhotoInterface {
 
 export default function UploadPhoto({ currentReport, setCurrentReport, handlePhotoUpload }: UploadPhotoInterface) {
     return (
-        <CardContainer title={`📸 Upload a photo of ${currentReport.dogName}!`}>
+        <CardContainer title={`Upload a photo of ${currentReport.dogName} 📸`}>
             {currentReport.photo ? (
                 <div className="relative">
                     <img

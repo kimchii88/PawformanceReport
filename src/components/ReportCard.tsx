@@ -166,19 +166,20 @@ export default function ReportCard() {
     };
 
     return (
-        <div className="min-h-screen bg-[url('/images/crimp_paper.jpg')] bg-cover p-6 ">
+        <div className="min-h-screen bg-[url('/images/crimp_paper.jpg')] bg-cover p-3 ">
             <div className="max-w-2xl mx-auto h-screen min-h-screen">
                 <div className="mb-6">
-                    <div className="flex justify-between items-center mb-4 justify-self-center">
-                        <div className="text-3xl font-bold">✨ 🦴 Create Your Pup’s Report Card 🐕 ✨</div>
+                    <div className="flex flex-col justify-between items-center mb-4 justify-self-center">
+                        {ColorfulTitle({ text: `Doggy Report Card`, sizing: "text-2xl" })} {`\n`}
+                        {ColorfulTitle({ text: `Generator`, sizing: "text-2xl" })}
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow-2xl p-8 border-8 border-double border-orange-400 h-10/12 flex flex-col overflow-hidden justify-between">
-                    <div className="sticky top-0 z-20 bg-white px-8 pt-8 pb-4">
+                <div className="bg-white rounded-lg shadow-2xl md:p-8 p-2 border-8 border-double border-orange-400 h-10/12 flex flex-col overflow-hidden justify-between">
+                    <div className="sticky top-0 z-20 bg-white md:px-8 md:pt-8 pb-4 px-2 pt-2">
                         <ProgressStepper currentStep={currentStep} steps={steps} />
                     </div>
-                    <div className="flex-1 overflow-y-auto px-8 py-6">
+                    <div className="flex-1 overflow-y-auto md:px-8 md:py-6">
                         {steps[currentStep] === "name" && (
                             <Name currentReport={currentReport} setCurrentReport={setCurrentReport} />
                         )}

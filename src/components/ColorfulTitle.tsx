@@ -1,8 +1,9 @@
 interface ColorfulTitle {
     text: string;
+    sizing?: string;
 }
 
-export default function ColorfulTitle({ text }: ColorfulTitle) {
+export default function ColorfulTitle({ text, sizing = "text-4xl" }: ColorfulTitle) {
     const colors = [
         "text-orange-500",
         "text-red-500",
@@ -20,7 +21,7 @@ export default function ColorfulTitle({ text }: ColorfulTitle) {
             {text.split("").map((char, idx) => (
                 <span
                     key={idx}
-                    className={`text-4xl font-black ${colors[idx % colors.length]}`}
+                    className={`${sizing} font-black ${colors[idx % colors.length]}`}
                     style={{ fontFamily: "Comic Sans MS, cursive" }}
                 >
                     {char === " " ? "\u00A0" : char}

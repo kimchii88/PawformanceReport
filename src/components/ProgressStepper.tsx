@@ -25,7 +25,7 @@ export function ProgressStepper({ currentStep, steps }: ProgressStepperProps) {
                 />
 
                 {/* steps */}
-                <div className="relative flex justify-between w-full">
+                <div className="relative flex justify-between w-full ">
                     {steps.map((label, idx) => {
                         const isCompleted = idx < currentStep;
                         const isActive = idx === currentStep;
@@ -50,7 +50,7 @@ export function ProgressStepper({ currentStep, steps }: ProgressStepperProps) {
                                 {/* label */}
                                 <div
                                     className={[
-                                        "text-xs font-bold text-center truncate w-20",
+                                        "text-xs font-bold text-center truncate w-20 hidden md:block",
                                         isCompleted || isActive ? "text-gray-700" : "text-gray-400",
                                     ].join(" ")}
                                     style={{ fontFamily: "Comic Sans MS, cursive" }}

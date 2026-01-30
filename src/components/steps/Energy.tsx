@@ -53,12 +53,11 @@ export default function Energy({ currentReport, setCurrentReport }: BehaviourInt
     const energyStyles = getEnergyStyles(energyLevel);
 
     return (
-        <CardContainer title="⚡ How were their Energy Levels?">
+        <CardContainer title={`How was ${currentReport.gender === "boy" ? "His" : "Her"} Energy? ⚡`}>
             <div className="mb-8">
                 <div className="w-full">
                     <div className="mb-10">
                         <div className="flex justify-between items-center mb-3">
-                            <span className="text-sm font-medium text-gray-600">Energy Levels</span>
                             <span
                                 className={`text-2xl font-bold ${energyStyles.bg} ${energyStyles.text} px-4 py-1 rounded-full bg-opacity-10`}
                             >
